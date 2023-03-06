@@ -1,4 +1,4 @@
-const BASE_URI = `https://us-east-2.aws.data.mogodb-api.com/app/${APP_ID}/endpoint/data/v1/`;
+const BASE_URI = `https://us-east-2.aws.data.mogodb-api.com/app/${Deno.env.get("APP_ID")}/endpoint/data/v1/`;
 const DATA_SOURCE = "pocket-coach-cluster";
 const DATABASE = "pocketCoach";
 const COLLECTION = "userAccount"; 
