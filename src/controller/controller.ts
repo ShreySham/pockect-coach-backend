@@ -64,7 +64,13 @@ const getAccount = async ({
 				success:false,
 				msg: "No Account Id",
 			}
-		} else{
+		} else if(!ObjectId.isValid(params.id)) {
+			response.status = 400;
+			response.body = {
+				success:false,
+				msg: "Account Id is not valid",
+			}
+		} else {
 			const userInfo = await users.findOne({
 				_id: new ObjectId(params.id),
 			});
