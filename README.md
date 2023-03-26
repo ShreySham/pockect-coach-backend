@@ -13,3 +13,11 @@ Navigate into the Project directory and run:
 denon start
 ```
 Thats it! the backend is running!
+
+## Setting up MongoDB connections
+In order to have the server connect to MongoDB, we have to provide the correct `APP_ID` and `DATA_API_KEY`. We chose to store these in a `.env` file in the project root with the following format:
+
+```
+DATA_API_KEY=YOUR_DATA_API_KEY
+APP_ID=YOUR_APP_ID
+```
